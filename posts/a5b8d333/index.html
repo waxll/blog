@@ -1,0 +1,2877 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#3.0-beta'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>Hexo常用指令 - Colsrch&#39;Blog</title>
+  
+    <meta name="keywords" content="Hexo">
+  
+
+  
+    <meta name="description" content="本篇仅介绍Hexo常用指令及Hexo博客搭建过程中使用的命令，需要完整教程请转至上篇Hexo博客搭建教程（全）">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Colsrch'Blog">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/Colsrch/CDN@master/favicon.png">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+	  setTimeout(function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b2d15dc956a098a68d6f4aeefaf45e7b";
+		hm.defer=true;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+	  }, 5000);
+    })();
+    </script>
+  
+  <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/7eafc7c8.js","daovoice")</script>
+</head>
+
+<body oncontextmenu="return popMenu(event);">
+  
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post' style="display: none;">
+      <div class='cover-body'>
+  <div class='a'>
+    
+    
+      <p class="title">Colsrch's blog</p>
+    
+    
+      <p class="subtitle">愿多年以后，我可以酌一杯清酒，烂醉如泥，梦中回到我们的曾经。</p>
+    
+  </div>
+  <div class='b'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="可以搜索文章哦" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <ul class='cover-list-h'>
+        
+          
+            <li>
+              <a class="nav home"
+                href="/"
+                
+                
+                id="home">
+                <i class='fas fa-home fa-fw'></i>首页
+              </a>
+            </li>
+          
+            <li>
+              <a class="nav home"
+                href="/archives/"
+                
+                
+                id="archives">
+                <i class='fas fa-archive fa-fw'></i>归档
+              </a>
+            </li>
+          
+            <li>
+              <a class="nav home"
+                href="/friends/"
+                
+                
+                id="friends">
+                <i class='fas fa-link fa-fw'></i>友链
+              </a>
+            </li>
+          
+            <li>
+              <a class="nav home"
+                href="/say-go/"
+                
+                
+                id="say-go">
+                <i class='fas fa-comment-dots fa-fw fa-fw'></i>主创说
+              </a>
+            </li>
+          
+            <li>
+              <a class="nav home"
+                href="/messages/"
+                
+                
+                id="messages">
+                <i class='fas fa-comments fa-fw'></i>留言板
+              </a>
+            </li>
+          
+            <li>
+              <a class="nav home"
+                href="/about/"
+                
+                
+                id="about">
+                <i class='fas fa-info-circle fa-fw'></i>关于
+              </a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+      <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+    </cover>
+    <header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img class='logo' src='https://cdn.jsdelivr.net/gh/Colsrch/CDN@master/colsrch.png'/>
+          
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-cube fa-fw fa-fw'></i>项目
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/wiki/papro/
+                  
+                  
+                  
+                    id="wikipapro"
+                  >
+                  成绩自动分析工具
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/wiki/
+                  
+                  
+                  
+                    id="wiki"
+                  >
+                  <i class='fas fa-chevron-right fa-fw fa-fw'></i>所有项目
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fa-fw fa fa-book fa-fw fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fa-fw fa fa-bars fa-fw'></i>娱乐
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/books/
+                  
+                  
+                  
+                    id="books"
+                  >
+                  <i class='fa fa-book fa-fw'></i>悦读
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/photo/
+                  
+                  
+                  
+                    id="photo"
+                  >
+                  <i class='fa-fw fa fa-globe fa-fw'></i>相册
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              
+                <li>
+                  <a class="flat-box">
+                    <i class='fas fa-compact-disc fa-fw music'></i>音乐
+                  </a>
+                  <ul class="list-v">
+                    <li>
+                      <div class="aplayer-container">
+                        
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      volume='0.7'
+      loop='all'
+      order='random'
+      fixed='false'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='4985300752'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+                      </div>
+                    </li>
+                  </ul>
+                <li>
+              
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fa-fw fa fa-bars fa-fw'></i>小功能
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/atom.xml
+                  
+                  
+                  
+                    id="atomxml"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://7bu.top/
+                  
+                  
+                  
+                    id="https:7butop"
+                  >
+                  <i class='fa fa-image fa-fw'></i>去不图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fa fa-binoculars fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://lmioy5cbjrrc.leanapp.cn/
+                  
+                  
+                  
+                    id="https:lmioy5cbjrrcleanappcn"
+                  >
+                  <i class='far fa-comments fa-fw fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jxsfgz-cat.cloudstudio.net/
+                  
+                  
+                  
+                    id="https:jxsfgz-catcloudstudionet"
+                  >
+                  <i class='far fa-edit fa-fw fa-fw'></i>云端编辑
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=http://tongji.baidu.com/web/welcome/ico?s=b2d15dc956a098a68d6f4aeefaf45e7b
+                  
+                  
+                  
+                    id="http:tongjibaiducomwebwelcomeico?s=b2d15dc956a098a68d6f4aeefaf45e7b"
+                  >
+                  <i class='fa fa-align-left fa-fw fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fa fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/history/
+                  
+                  
+                  
+                    id="history"
+                  >
+                  <i class='fa fa-history fa-fw'></i>建站史
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/say-go/
+                  
+                  
+                  
+                    id="say-go"
+                  >
+                  <i class='fas fa-comment-dots fa-fw fa-fw'></i>主创说
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/messages/
+                  
+                  
+                  
+                    id="messages"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/donation/
+                  
+                  
+                  
+                    id="donation"
+                  >
+                  <i class='fa fa-thumbs-up fa-fw'></i>捐助我
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="搜索..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-cube fa-fw fa-fw'></i>项目
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/wiki/papro/
+                  
+                  
+                  
+                    id="wikipapro"
+                  >
+                  成绩自动分析工具
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/wiki/
+                  
+                  
+                  
+                    id="wiki"
+                  >
+                  <i class='fas fa-chevron-right fa-fw fa-fw'></i>所有项目
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fa-fw fa fa-book fa-fw fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fa-fw fa fa-bars fa-fw'></i>娱乐
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/books/
+                  
+                  
+                  
+                    id="books"
+                  >
+                  <i class='fa fa-book fa-fw'></i>悦读
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/photo/
+                  
+                  
+                  
+                    id="photo"
+                  >
+                  <i class='fa-fw fa fa-globe fa-fw'></i>相册
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fa-fw fa fa-bars fa-fw'></i>小功能
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/atom.xml
+                  
+                  
+                  
+                    id="atomxml"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://7bu.top/
+                  
+                  
+                  
+                    id="https:7butop"
+                  >
+                  <i class='fa fa-image fa-fw'></i>去不图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fa fa-binoculars fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://lmioy5cbjrrc.leanapp.cn/
+                  
+                  
+                  
+                    id="https:lmioy5cbjrrcleanappcn"
+                  >
+                  <i class='far fa-comments fa-fw fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jxsfgz-cat.cloudstudio.net/
+                  
+                  
+                  
+                    id="https:jxsfgz-catcloudstudionet"
+                  >
+                  <i class='far fa-edit fa-fw fa-fw'></i>云端编辑
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=http://tongji.baidu.com/web/welcome/ico?s=b2d15dc956a098a68d6f4aeefaf45e7b
+                  
+                  
+                  
+                    id="http:tongjibaiducomwebwelcomeico?s=b2d15dc956a098a68d6f4aeefaf45e7b"
+                  >
+                  <i class='fa fa-align-left fa-fw fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fa fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/history/
+                  
+                  
+                  
+                    id="history"
+                  >
+                  <i class='fa fa-history fa-fw'></i>建站史
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/say-go/
+                  
+                  
+                  
+                    id="say-go"
+                  >
+                  <i class='fas fa-comment-dots fa-fw fa-fw'></i>主创说
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/messages/
+                  
+                  
+                  
+                    id="messages"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=/donation/
+                  
+                  
+                  
+                    id="donation"
+                  >
+                  <i class='fa fa-thumbs-up fa-fw'></i>捐助我
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  </div>
+  
+
+  <div class="l_body nocover">
+    <div class='body-wrapper' id="pjax-container">
+      
+        <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">Hexo常用指令</div>
+  <div id="pjax-enable-cover">true</div>
+  
+  <div id="valine-path">none</div>
+  <div id="valine-placeholder">none</div>
+  
+  
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover')[0].style.display = "none";
+    document.getElementsByClassName('l_body')[0].classList.add("nocover");
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "blog") { // 半屏
+      document.getElementsByClassName('cover')[0].classList.remove("full");
+      document.getElementsByClassName('cover')[0].classList.add("half");
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "docs") { // 全屏
+      document.getElementsByClassName('cover')[0].classList.remove("half");
+      document.getElementsByClassName('cover')[0].classList.add("full");
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover')[0].style.display = "";
+    document.getElementsByClassName('l_body', 'show')[0].classList.remove("nocover");
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+      
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal shadow blur article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/posts/a5b8d333/">
+      Hexo常用指令
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://colsrch.top" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/Colsrch/images/Colsrch/avatar.jpg">
+    <p>Colsrch</p>
+  </a>
+</div>
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020-04-18</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/Hexo/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>Hexo</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.7k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：6分钟</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              
+  <div class="new-meta-item browse valine">
+    <a class='notlink'>
+      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="/posts/a5b8d333/" class="leancloud_visitors" data-flag-title="Hexo常用指令">
+      <p>
+        <span class="leancloud-visitors-count"></span>
+      </p>
+      </span>
+    </a>
+  </div>
+
+
+            
+          
+            
+              
+<div class="new-meta-item comments-count">
+  
+  <a href="/posts/a5b8d333/#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/posts/a5b8d333/">0</span>
+    <span class="leancloud-comments-count">&nbsp;条评论</span>
+  </a>
+</div>
+
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇仅介绍Hexo常用指令及Hexo博客搭建过程中使用的命令，需要完整教程请转至上篇<a href="/2020/04/18/hexo-help/">Hexo博客搭建教程（全）</a></p>
+<a id="more"></a>
+
+<hr>
+<h2 id="Hexo搭建（仅命令）"><a href="#Hexo搭建（仅命令）" class="headerlink" title="Hexo搭建（仅命令）"></a>Hexo搭建（仅命令）</h2><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><ul>
+<li>安装GIt</li>
+<li>安装Nodejs</li>
+</ul>
+<p><strong>检查配置是否成功</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装cnpm</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p><strong>检查cnpm是否安装成功</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装hexo</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2、初始化博客"><a href="#2、初始化博客" class="headerlink" title="2、初始化博客"></a>2、初始化博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>若在<code>Install dependencies</code>卡住则执行<code>Ctrl + C</code>结束命令</p>
+<p><strong>使用国内的镜像完成博客的初始化工作</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="3、配置主题"><a href="#3、配置主题" class="headerlink" title="3、配置主题"></a>3、配置主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 复制的地址 themes/主题名字</span><br></pre></td></tr></table></figure>
+
+<p><strong>修改配置文件</strong></p>
+<p>打开博客根目录的<code>_config.yml</code>文件，找到<code>theme</code>这一行，修改主题名字</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="4、上传"><a href="#4、上传" class="headerlink" title="4、上传"></a>4、上传</h3><blockquote>
+<p>请先配置Git的SSH等信息</p>
+</blockquote>
+<p><strong>安装上传插件</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p><strong>上传</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="5、配置多终端工作"><a href="#5、配置多终端工作" class="headerlink" title="5、配置多终端工作"></a>5、配置多终端工作</h3><p>先在仓库中新建一个hexo分支，并设置默认分支为hexo（这样每次同步的时候就不用指定分支，比较方便）。</p>
+<ol>
+<li>克隆hexo分支</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@e.coding.net:eawakeofi/Colsrch/Colsrch.git</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>克隆到本地的Coding中，把除了.git 文件夹外的所有文件都删掉</li>
+<li>把之前我们写的博客源文件全部复制过来，除了.deploy_git</li>
+</ol>
+<p>这里应该说一句，复制过来的源文件应该有一个.gitignore，用来忽略一些不需要的文件，如果没有的话，自己新建一个，在里面写上如下，表示这些类型文件不需要git：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules&#x2F;</span><br><span class="line">public&#x2F;</span><br><span class="line">.deploy*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意，如果你之前克隆过theme中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为git不能嵌套上传，最好是显示隐藏文件，检查一下有没有，否则上传的时候会出错，导致你的主题文件无法上传，这样你的配置在别的电脑上就用不了了。</strong></p>
+<ol start="4">
+<li>上传</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit –m <span class="string">"add branch"</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="6、更换电脑使用"><a href="#6、更换电脑使用" class="headerlink" title="6、更换电脑使用"></a>6、更换电脑使用</h3><p>一样的，跟之前的环境搭建一样，</p>
+<ul>
+<li><p>安装git</p>
+<ul>
+<li>设置git全局邮箱和用户名</li>
+<li>设置ssh key</li>
+</ul>
+</li>
+<li><p>安装nodejs</p>
+</li>
+<li><p>安装hexo</p>
+<blockquote>
+<p>但是已经不需要初始化了</p>
+</blockquote>
+</li>
+</ul>
+<p>直接在任意文件夹下，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@………………</span><br></pre></td></tr></table></figure>
+
+<p>然后进入克隆到的文件夹：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>生成，部署：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以开始写你的新博客了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"文章名"</span></span><br></pre></td></tr></table></figure>
+
+<p>Tips:</p>
+<p>不要忘了，每次写完最好都把源文件上传一下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">"xxx"</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p>如果是在已经编辑过的电脑上，已经有clone文件夹了，那么，每次只要和远端同步一下就行了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="7、国内外分流"><a href="#7、国内外分流" class="headerlink" title="7、国内外分流"></a>7、国内外分流</h3><p>具体方法请查看上篇，这里只给出<code>_config.yml</code>的修改</p>
+<p>hexo官方文档是这样的：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;,[branch]</span></span><br><span class="line">    <span class="attr">coding:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;,[branch]</span></span><br></pre></td></tr></table></figure>
+
+<p>那么，我们只需要：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">    <span class="attr">coding:</span> <span class="string">git@e.coding.net:eawakeofi/Colsrch/Colsrch.git,master</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">git@github.com:1332925715/1332925715.github.io.git,master</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>之后直接部署</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><blockquote>
+<p>转自Hexo中文站</p>
+</blockquote>
+<p>你无需全部记住，可以只记住下面几个常用的,具体作用可以<code>点击对应命令</code>跳转到其用法</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="#init">init</a></td>
+<td align="center">初始化博客</td>
+</tr>
+<tr>
+<td align="center"><a href="#new">new</a></td>
+<td align="center">新建文章</td>
+</tr>
+<tr>
+<td align="center"><a href="#generate">generate</a></td>
+<td align="center">生成静态文件</td>
+</tr>
+<tr>
+<td align="center"><a href="#server">server</a></td>
+<td align="center">本地预览</td>
+</tr>
+<tr>
+<td align="center"><a href="#deploy">deploy</a></td>
+<td align="center">部署博客</td>
+</tr>
+<tr>
+<td align="center"><a href="#clean">clean</a></td>
+<td align="center">清理缓存</td>
+</tr>
+</tbody></table>
+<h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
+
+<p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p>
+<h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <a href="https://www.hexocn.cn/docscn/configuration.html" target="_blank" rel="noopener">_config.yml</a> 中的 <code>default_layout</code> 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"post title with whitespace"</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-p</code>, <code>--path</code></td>
+<td>自定义新文章的路径</td>
+</tr>
+<tr>
+<td><code>-r</code>, <code>--replace</code></td>
+<td>如果存在同名文章，将其替换</td>
+</tr>
+<tr>
+<td><code>-s</code>, <code>--slug</code></td>
+<td>文章的 Slug，作为新文章的文件名和发布后的 URL</td>
+</tr>
+</tbody></table>
+<p>默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 <code>index.md</code> 文件。你可以使用 <code>--path</code> 参数来覆盖上述行为、自行决定文件的目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page --path about/me <span class="string">"About me"</span></span><br></pre></td></tr></table></figure>
+
+<p>以上命令会创建一个 <code>source/about/me.md</code> 文件，同时 Front Matter 中的 title 为 <code>&quot;About me&quot;</code></p>
+<p>注意！title 是必须指定的！如果你这么做并不能达到你的目的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page --path about/me</span><br></pre></td></tr></table></figure>
+
+<p>此时 Hexo 会创建 <code>source/_posts/about/me.md</code>，同时 <code>me.md</code> 的 Front Matter 中的 title 为 <code>&quot;page&quot;</code>。这是因为在上述命令中，hexo-cli 将 <code>page</code> 视为指定文章的标题、并采用默认的 <code>layout</code>。</p>
+<p><strong>创建草稿</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft <span class="string">"new draft"</span></span><br></pre></td></tr></table></figure>
+
+<p>会在source/_drafts目录下生成一个new-draft.md文件。但是这个文件不被显示在页面上，链接也访问不到。也就是说如果你想把某一篇文章移除显示，又不舍得删除，可以把它移动到_drafts目录之中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//如果你希望强行预览草稿，更改配置文件：</span><br><span class="line">render_drafts: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">//或者，如下方式启动server：</span><br><span class="line">hexo server --drafts</span><br></pre></td></tr></table></figure>
+
+<p><strong>发布草稿的指令：<a href="#publish">publish</a></strong></p>
+<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>生成静态文件。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-d</code>, <code>--deploy</code></td>
+<td>文件生成后立即部署网站</td>
+</tr>
+<tr>
+<td><code>-w</code>, <code>--watch</code></td>
+<td>监视文件变动</td>
+</tr>
+<tr>
+<td><code>-b</code>, <code>--bail</code></td>
+<td>生成过程中如果发生任何未处理的异常则抛出异常</td>
+</tr>
+<tr>
+<td><code>-f</code>, <code>--force</code></td>
+<td>强制重新生成文件 Hexo 引入了差分机制，如果 <code>public</code> 目录存在，那么 <code>hexo g</code> 只会重新生成改动的文件。 使用该参数的效果接近 <code>hexo clean &amp;&amp; hexo generate</code></td>
+</tr>
+<tr>
+<td><code>-c</code>, <code>--concurrency</code></td>
+<td>最大同时生成文件的数量，默认无限制</td>
+</tr>
+</tbody></table>
+<p>该命令可以简写为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+
+<p>发表草稿。</p>
+<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>启动服务器。默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-p</code>, <code>--port</code></td>
+<td>重设端口</td>
+</tr>
+<tr>
+<td><code>-s</code>, <code>--static</code></td>
+<td>只使用静态文件</td>
+</tr>
+<tr>
+<td><code>-l</code>, <code>--log</code></td>
+<td>启动日记记录，使用覆盖记录格式</td>
+</tr>
+</tbody></table>
+<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署网站。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-g</code>, <code>--generate</code></td>
+<td>部署之前预先生成静态文件</td>
+</tr>
+</tbody></table>
+<p>该命令可以简写为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="render"><a href="#render" class="headerlink" title="render"></a>render</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo render &lt;file1&gt; [file2] ...</span><br></pre></td></tr></table></figure>
+
+<p>渲染文件。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-o</code>, <code>--output</code></td>
+<td>设置输出路径</td>
+</tr>
+</tbody></table>
+<h3 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo migrate &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>从其他博客系统 <a href="https://www.hexocn.cn/docscn/migration.html" target="_blank" rel="noopener">迁移内容</a>。</p>
+<h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo list &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>列出网站资料。</p>
+<h3 id="version"><a href="#version" class="headerlink" title="version"></a>version</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
+
+<p>显示 Hexo 版本</p>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>版权声明：本网站所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://colsrch.top">Colsrch’Blog</a></p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://colsrch.top/posts/a5b8d333/>https://colsrch.top/posts/a5b8d333/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-15T18:55:28+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020-07-15</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Hexo</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.7k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：6分钟</p>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://colsrch.top/posts/a5b8d333/&title=Hexo常用指令 - Colsrch'Blog&summary=前言本篇仅介绍Hexo常用指令及Hexo博客搭建过程中使用的命令，需要完整教程请转至上篇Hexo博客搭建教程（全）"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://colsrch.top/posts/a5b8d333/&title=Hexo常用指令 - Colsrch'Blog&summary=前言本篇仅介绍Hexo常用指令及Hexo博客搭建过程中使用的命令，需要完整教程请转至上篇Hexo博客搭建教程（全）"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://colsrch.top/posts/a5b8d333/&title=Hexo常用指令 - Colsrch'Blog&summary=前言本篇仅介绍Hexo常用指令及Hexo博客搭建过程中使用的命令，需要完整教程请转至上篇Hexo博客搭建教程（全）"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/posts/5f073d29/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>利用腾讯Cloud Studio云端使用hexo</p>
+                <p class='content'>
+本篇介绍hexo如何在云端部署，它可以让您无需电脑，无需安装Git、nodejs等便可编写hexo文章并配置hexo。你在本地可以做的操作，云端都可以做到
+
+
+
+前言大家都有过这样的经历吧，当...</p>
+              </a>
+            
+            
+              <a class='next' href='/posts/454fe87a/'>
+                <p class='title'>Hexo博客搭建教程（全）<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>Hexo简介Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+  
+    
+    
+  
+
+  <section class="widget related_posts shadow blur desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span class='name'>相关文章</span>
+    
+  </header>
+
+
+    <div class="content">
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/posts/d4fe038d/" title="Coding+Hexo实现自动化部署" rel="bookmark">Coding+Hexo实现自动化部署</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/posts/32c8ba21/" title="hexo-offline-popup插件（加速你博客的访问速度" rel="bookmark">hexo-offline-popup插件（加速你博客的访问速度</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/posts/5f073d29/" title="利用腾讯Cloud Studio云端使用hexo" rel="bookmark">利用腾讯Cloud Studio云端使用hexo</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/posts/da1d5c8b/" title="LeanCLoud定时唤醒失败的解决方案（持续更新）" rel="bookmark">LeanCLoud定时唤醒失败的解决方案（持续更新）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/posts/454fe87a/" title="Hexo博客搭建教程（全）" rel="bookmark">Hexo博客搭建教程（全）</a></h3></div></li></ul>
+    </div>
+  </section>
+
+
+  
+
+
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box reveal comments shadow blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Hexo常用指令',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+<section class="widget grid shadow blur desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>导航</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="grid navigation">
+      
+        <a class="flat-box" title="/atom.xml" href="/atom.xml"
+          
+          
+          id="atomxml">
+          
+            <i class="fas fa-rss fa-fw" aria-hidden="true"></i>
+          
+          RSS订阅
+        </a>
+      
+        <a class="flat-box" title="/friends/" href="/friends/"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-users fa-fw" aria-hidden="true"></i>
+          
+          友情链接
+        </a>
+      
+        <a class="flat-box" title="/messages/" href="/messages/"
+          
+          
+          id="messages">
+          
+            <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+          
+          留言板
+        </a>
+      
+        <a class="flat-box" title="/say-go/" href="/say-go/"
+          
+          
+          id="say-go">
+          
+            <i class="fas fa-comment-dots fa-fw fa-fw" aria-hidden="true"></i>
+          
+          主创说
+        </a>
+      
+        <a class="flat-box" title="/photo/" href="/photo/"
+          
+          
+          id="photo">
+          
+            <i class="fa-fw fa fa-globe fa-fw" aria-hidden="true"></i>
+          
+          相册
+        </a>
+      
+        <a class="flat-box" title="https://travellings.now.sh/" href="https://travellings.now.sh/"
+          
+          
+          id="https:travellingsnowsh">
+          
+            <i class="fa fa-binoculars fa-fw" aria-hidden="true"></i>
+          
+          开往
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget text shadow blur desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <p>本站已使用Pjax😊</p>
+
+    
+      <p>本站新增内容检测机制，当有新内容时会提示您网站内容有更新</p>
+
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow blur desktop mobile">
+    
+  <header>
+    
+      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/C-C/" style="font-size: 17.33px; color: #828282">C/C++</a> <a href="/tags/CString/" style="font-size: 14px; color: #999">CString</a> <a href="/tags/ClistCtrl/" style="font-size: 14px; color: #999">ClistCtrl</a> <a href="/tags/Cloud-Studio/" style="font-size: 14px; color: #999">Cloud Studio</a> <a href="/tags/Coding/" style="font-size: 14px; color: #999">Coding</a> <a href="/tags/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" style="font-size: 14px; color: #999">Git常用命令</a> <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/LeanCloud/" style="font-size: 14px; color: #999">LeanCloud</a> <a href="/tags/MFC/" style="font-size: 14px; color: #999">MFC</a> <a href="/tags/Visual-Studio/" style="font-size: 14px; color: #999">Visual Studio</a> <a href="/tags/%E6%9D%82%E6%96%87/" style="font-size: 20.67px; color: #6c6c6c">杂文</a> <a href="/tags/%E8%87%AA%E8%BF%B0/" style="font-size: 14px; color: #999">自述</a>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget category shadow blur desktop">
+    
+  <header>
+    
+      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/C-C/" href="/categories/C-C/"
+            id="categoriesC-C"
+            ><div class='name'>C/C++</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/C-C/C/" href="/categories/C-C/C/"
+            id="categoriesC-CC"
+            ><div class='name'>C</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/C-C/CString/" href="/categories/C-C/CString/"
+            id="categoriesC-CCString"
+            ><div class='name'>CString</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/C-C/MFC/" href="/categories/C-C/MFC/"
+            id="categoriesC-CMFC"
+            ><div class='name'>MFC</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/C-C/MFC/ClistCtrl/" href="/categories/C-C/MFC/ClistCtrl/"
+            id="categoriesC-CMFCClistCtrl"
+            ><div class='name'>ClistCtrl</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/Git/" href="/categories/Git/"
+            id="categoriesGit"
+            ><div class='name'>Git</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/Hexo/" href="/categories/Hexo/"
+            id="categoriesHexo"
+            ><div class='name'>Hexo</div><div class='badge'>(6)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/Visual-Studio/" href="/categories/Visual-Studio/"
+            id="categoriesVisual-Studio"
+            ><div class='name'>Visual Studio</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9D%82%E6%96%87/" href="/categories/%E6%9D%82%E6%96%87/"
+            id="categoriesE69D82E69687"
+            ><div class='name'>杂文</div><div class='badge'>(5)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
+
+<section class="widget list shadow blur desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-thumbs-up fa-fw" aria-hidden="true"></i><span class='name'>推荐</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="https://hexocn.cn/" href="https://hexocn.cn/"
+          
+          
+          id="https:hexocncn"
+          >
+          <div class='name'>
+            
+              <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/thecdn/hexocn/hexo200.png">
+            
+            Hexo中文站
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow blur desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo搭建（仅命令）"><span class="toc-text">Hexo搭建（仅命令）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、安装"><span class="toc-text">1、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、初始化博客"><span class="toc-text">2、初始化博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、配置主题"><span class="toc-text">3、配置主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、上传"><span class="toc-text">4、上传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、配置多终端工作"><span class="toc-text">5、配置多终端工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、更换电脑使用"><span class="toc-text">6、更换电脑使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、国内外分流"><span class="toc-text">7、国内外分流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-text">常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#init"><span class="toc-text">init</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#new"><span class="toc-text">new</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generate"><span class="toc-text">generate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#publish"><span class="toc-text">publish</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#server"><span class="toc-text">server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deploy"><span class="toc-text">deploy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#render"><span class="toc-text">render</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#migrate"><span class="toc-text">migrate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clean"><span class="toc-text">clean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list"><span class="toc-text">list</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#version"><span class="toc-text">version</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+    </div>
+    
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="http://github.com/Colsrch"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=1ba6uaantr2Vs7qtuLS8ufu2urg"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1332925715&amp;site=qq&amp;menu=yes"
+                class="social fab fa-qq flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=405423746"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://travellings.now.sh/"
+                class="social fa fa-binoculars flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+          次, 
+          访客数为<span id="busuanzi_value_site_uv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人次
+        
+        <div><span id="timeDate">感谢您的访问，</span><span id="times">如您在留言板以外的位置看到此字样，请联系我</span>
+          <script>
+              var now = new Date(); 
+              function createtime() { 
+                  var grt= new Date("02/11/2020 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+                  now.setTime(now.getTime()+250); 
+                  days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                  if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                  mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                  snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                  document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+                  document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+              } 
+          setInterval("createtime()",250);
+          </script></div>
+      
+    
+      
+        
+          <div><p><a href="https://icp.gov.moe" target="_blank" rel="noopener">萌ICP备</a> <a href="https://icp.gov.moe/?keyword=202008888" target="_blank" rel="noopener">202008888号</a></p>
+</div>
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://colsrch.top">Copyright © 2019-2020 Colsrch</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <div>
+    <div id="menu-div" style="display: none;position:fixed;z-index: 2000;">
+  <ul class="list-v" style="display: block;width: 120px;">
+    <li>
+      <a class="flat-box waves-effect waves-block" style="display: none;" id="menu-copy" onclick="menuCopy()">
+        <i class="fa fa-copy fa-fw"></i> 复制
+      </a>
+    </li>
+    <li>
+      <a class="flat-box waves-effect waves-block" onclick="history.back()">
+        <i class="fa fa-arrow-left fa-fw"></i> 返回
+      </a>
+    </li> 
+    <li>
+      <a class="flat-box waves-effect waves-block" onclick="window.location.reload()">
+        <i class="fa fa-redo fa-fw"></i> 刷新
+      </a>
+    </li>
+    <hr>
+    <li>
+      <a class="flat-box waves-effect waves-block" href="/">
+        <i class="fas fa-home fa-fw"></i> 首页
+      </a>
+    </li>    
+    <li>
+      <a class="flat-box waves-effect waves-block" href="/messages/">
+        <i class="fas fa-comments fa-fw"></i> 留言
+      </a>
+    </li>
+    <li>
+      <a class="flat-box waves-effect waves-block" href="/friends/">
+        <i class="fas fa-link fa-fw"></i> 友链
+      </a>
+    </li>
+    <hr>
+    <li>
+      <a class="flat-box">
+        <i class='fa fa-music fa-fw'></i> 音乐
+      </a>
+      <ul class="list-v" style="margin-left: 110px;">
+        <li>
+          <a class="flat-box waves-effect" onclick="menuPlay()">
+            <i class="fa fa-play fa-fw"></i> 播放
+          </a>
+        </li>
+        <li>
+          <a class="flat-box waves-effect" onclick="menuPause()">
+            <i class="fa fa-pause fa-fw"></i> 暂停
+          </a>
+        </li>
+        <li>
+          <a class="flat-box waves-effect" onclick="menuBackward()">
+            <i class="fa fa-angle-double-left fa-fw"></i> 上一首
+          </a>
+        </li>
+        <li>
+          <a class="flat-box waves-effect" onclick="menuForward()">
+            <i class="fa fa-angle-double-right fa-fw"></i> 下一首
+          </a>
+        </li>
+      </ul>
+    <li>
+  </ul>
+</div>
+
+<script>
+  window.document.oncontextmenu = function () {
+    return false;
+  };
+
+  document.addEventListener("click", function (event) {
+    var mymenu = document.getElementById('menu-div');
+    mymenu.style.display = "none";
+  });
+
+  function popMenu(event) {
+    var copy = document.getElementById('menu-copy');
+    var select = window.getSelection().toString(); // 鼠标选中的文本
+    copy.style.display = select == "" ? "none" : "block";
+
+    var mymenu = document.getElementById('menu-div');
+    mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+    mymenu.style.top = event.clientY + "px";
+    mymenu.style.display = 'block';
+    return false; // 该行代码确保系统自带的右键菜单不会被调出
+  }
+
+  function hideMenu() {
+    document.getElementById('menu-div').style.display = 'none';
+  }
+
+  // 此处无需处理 js 加载异常
+  function menuPlay() {
+    var canplay = getCookie('canplay');
+    if( canplay != null && canplay == 'true') {
+      document.querySelector('meting-js').aplayer.play();
+    } else {
+      $.message({title: "音乐通知",message: "音乐加载失败，建议刷新~",type:'warning'});
+    }
+  }
+  function menuPause() {
+    var canplay = getCookie('canplay');
+    if( canplay != null && canplay == 'true') {
+      document.querySelector('meting-js').aplayer.pause();
+      var index = document.querySelector('meting-js').aplayer.list.index;
+      var title = document.querySelector('meting-js').aplayer.list.audios[index].title;
+      var artist = document.querySelector('meting-js').aplayer.list.audios[index].artist;
+      $.message({title:'音乐通知',message: '暂停播放：' + title + ' - ' + artist, type:'success'});
+    } else {
+      $.message({title: "音乐通知",message: "音乐加载失败，建议刷新~",type:'warning'});
+    }
+  }
+  function menuBackward() {
+    var canplay = getCookie('canplay');
+    if( canplay != null && canplay == 'true') {
+      document.querySelector('meting-js').aplayer.skipBack();
+      document.querySelector('meting-js').aplayer.play();
+    } else {
+      $.message({title: "音乐通知",message: "音乐加载失败，建议刷新~",type:'warning'});
+    }
+  }
+  function menuForward() {
+    var canplay = getCookie('canplay');
+    if( canplay != null && canplay == 'true') {
+      document.querySelector('meting-js').aplayer.skipForward();
+      document.querySelector('meting-js').aplayer.play();
+    } else {
+      $.message({title: "音乐通知",message: "音乐加载失败，建议刷新~",type:'warning'});
+    }
+  }
+
+  function menuCopy() {
+    document.execCommand("Copy"); 
+    $.message({title:'复制成功',message: window.getSelection().toString(),type:'success'});
+  }
+
+</script>
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer
+          integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/Colsrch/images/Wallpaper.png"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('') {
+          $('').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+
+
+<!--PS：只对 valine 做了 Pjax 兼容-->
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
+
+  
+  <script>
+    var GUEST_INFO = ['nick', 'mail', 'link'];
+    var meta = 'nick,mail,link'.split(',').filter(function (item) {
+      return GUEST_INFO.indexOf(item) > -1
+    });
+    var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+    var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+      return REQUIRED_FIELDS.indexOf(item) > -1
+    });
+
+    function emoji(path, idx, ext) {
+      return path + "/" + path + "-" + idx + "." + ext;
+    }
+
+    var emojiMaps = {};
+    for (var i = 1; i <= 54; i++) {
+      emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+    }
+    for (var i = 1; i <= 101; i++) {
+      emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+    }
+    for (var i = 1; i <= 116; i++) {
+      emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+    }
+    for (var i = 1; i <= 125; i++) {
+      emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+    }
+    for (var i = 1; i <= 4; i++) {
+      emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+    }
+
+    function pjax_valine() {
+      var valinePath = $.trim($('#valine-path').text()) === "none" ?
+              window.location.pathname : $.trim($('#valine-path').text());
+
+      var valinePlaceholder = $.trim($('#valine-placeholder').text()) === "none" ?
+              "自古评论出人才~" : $.trim($('#valine-placeholder').text());
+
+      var ALLPATH = '';
+      if(ALLPATH != '') valinePath = ALLPATH;
+
+      var valine = new Valine();
+      valine.init({
+        el: '#valine_container',
+        meta: meta,
+        placeholder: valinePlaceholder,
+        path: valinePath,
+        appId: "lmIOy5cBDQiz5oeAgPv0Hbe7-gzGzoHsz",
+        appKey: "G3rTprduowLdjm9CQpj58Fcm",
+        pageSize: '4',
+        avatar: 'robohash',
+        lang: 'zh-cn',
+        visitor: 'true',
+        highlight: 'true',
+        mathJax: 'false',
+        enableQQ: 'true',
+        requiredFields: requiredFields,
+        emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+        emojiMaps: emojiMaps
+      })
+    }
+
+    $(function () {
+      pjax_valine();
+    });
+  </script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+function wait(callback,seconds){var timelag=null;timelag=window.setTimeout(callback,seconds)}function pjax_initCopyCode(){var copyHtml='';copyHtml+='<button class="btn-copy" data-clipboard-snippet="">';copyHtml+='<i class="fa fa-copy"></i><span>COPY</span>';copyHtml+='</button>';$(".highlight .code pre").before(copyHtml);$(".article pre code").before(copyHtml);var clipboard=new ClipboardJS('.btn-copy',{target:function(trigger){return trigger.nextElementSibling}});clipboard.on('success',function(e){$.message({title:'复制成功',message:"代码已复制，请遵守相关授权协议。",type:'success'});let $btn=$(e.trigger);$btn.addClass('copied');let $icon=$($btn.find('i'));$icon.removeClass('fa-copy');$icon.addClass('fa-check-circle');let $span=$($btn.find('span'));$span[0].innerText='COPIED';wait(function(){$icon.removeClass('fa-check-circle');$icon.addClass('fa-copy');$span[0].innerText='COPY'},2000)});clipboard.on('error',function(e){e.clearSelection();let $btn=$(e.trigger);$btn.addClass('copy-failed');let $icon=$($btn.find('i'));$icon.removeClass('fa-copy');$icon.addClass('fa-times-circle');let $span=$($btn.find('span'));$span[0].innerText='COPY FAILED';wait(function(){$icon.removeClass('fa-times-circle');$icon.addClass('fa-copy');$span[0].innerText='COPY'},2000)})}$(function(){pjax_initCopyCode()});
+</script>
+
+
+<!--scrollreveal -->
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    function pjax_scrollrebeal() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '8px',
+        duration: '800',
+        interval: '100',
+        scale: '1'
+      });
+    }
+
+    $(function () {
+      pjax_scrollrebeal();
+    });
+  </script>
+
+<!-- ******************************** -->
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+<!-- ******************************** -->
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function () {
+    setCookie("canplay", 'true', '', '/');  // 用以控制音乐播放
+    
+      try{
+        setTimeout(function() {
+          if($(window).width() > 500) {
+            var isplay = true;
+            $.message({title: "音乐通知",message: "即将自动播放，点击<a id='stopMusic' class='stopMusic fix-cursor-pointer'>停止播放</a>",type:'warning'});
+            setTimeout(function() {
+              var aplayer = document.querySelector('meting-js').aplayer;
+              var index = aplayer.list.index;
+              var title = aplayer.list.audios[index].title;
+              var artist = aplayer.list.audios[index].artist;
+              var canplay = getCookie('canplay') == null ? false : getCookie('canplay');
+              if(isplay && canplay == 'true') {
+                document.querySelector('meting-js').aplayer.play();
+                setTimeout(function() {
+                  $.message({title:'音乐通知',message: '正在播放：' + title + ' - ' + artist, type:'success'});
+                }, 1050);
+              }
+            }, 3500);
+            $("#stopMusic").click(function() {
+              isplay = false;
+              $(".c-message--close").click();
+            })
+          }
+        }, 1500);
+      } catch (error) { // 主要用于捕捉 js 加载失败
+        setCookie("canplay", 'false', '', '/');
+        $.message({title:'音乐通知',message: '加载失败，已取消播放操作~', type:'warning'});
+      }
+    
+  });
+  
+    setTimeout(function() {
+      try {
+        document.querySelector('meting-js').aplayer.on('canplay', function (e) { // 近似于 play 事件，重置 cookie 状态
+          setCookie("canplay", 'true', '', '/');
+        });
+      } catch (error) {}
+    }, 3050);
+    setTimeout(function() {
+      try {
+        document.querySelector('meting-js').aplayer.on('error', function (e) { // 音乐加载失败
+          var canplay = getCookie('canplay') == null ? false : getCookie('canplay');
+          if(canplay == 'true'){
+            $.message({title: "音乐通知",message: "音乐加载失败~ 潜在网络问题",type:'warning'});
+            setCookie("canplay", false, '', '/');
+          }
+        });
+      } catch (error) {}
+    }, 3050);
+    setTimeout(function() {
+      try {
+        document.querySelector('meting-js').aplayer.on('play', function (e) {
+          var index = document.querySelector('meting-js').aplayer.list.index;
+          var title = document.querySelector('meting-js').aplayer.list.audios[index].title;
+          var artist = document.querySelector('meting-js').aplayer.list.audios[index].artist;
+          var canplay = getCookie('canplay') == null ? false : getCookie('canplay');
+          if(canplay == 'true'){  // 主力播放通知
+            $.message({title:'音乐通知',message: '正在播放：' + title + ' - ' + artist, type:'success'});
+          }
+        });
+      } catch (error) {}
+    }, 6050);  // 不监听由第一次自动播放产生的 play 事件
+  
+</script>
+<script>
+  daovoice('init', {
+  app_id: "7eafc7c8"
+});
+daovoice('update');
+</script>
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>  
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+  
+    document.addEventListener('pjax:send', function () {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.nav-main').find('.list-v').not('.menu-phone').css("display","none"); // 移除小尾巴
+      $('.menu-phone.list-v').css("display","none"); // 移除小尾巴
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+      $(window).unbind('resize');    // 解绑
+      $(window).unbind('scroll');    // 解绑
+      $(window).unbind('click');     // 解绑
+      $(document).unbind('scroll');  // 解绑
+      window.ShowLoading();
+    });
+  
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+      // _hmt.push(['_trackPageview', document.location.pathname]);
+      // 
+  
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+      
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+  
+      try{
+        pjax_fancybox();
+        
+          
+          if ('') {
+            $('').backstretch("resize");
+          } else {
+            $.backstretch("resize");
+          }
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+  
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+      window.location.href = event.triggerElement.href;
+    });
+</script>
+  
+    
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/inkss/common@1.4.1/hexo/js/message.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/inkss/common@master/hexo/js/cookie.min.js"></script>
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        $('a').each(function() {
+          const $this = $(this);
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== 'https://colsrch.top/' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+href+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
